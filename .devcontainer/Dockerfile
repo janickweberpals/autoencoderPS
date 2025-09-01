@@ -5,6 +5,7 @@ FROM $BASE
 
 # Copy RStudio preferences and helper script
 COPY rstudio-prefs.json /rstudio-prefs.json
-COPY copy-rstudio-prefs.sh /copy-rstudio-prefs.sh
-RUN chmod +x /copy-rstudio-prefs.sh
+COPY copy-rstudio-prefs.sh /usr/local/bin/copy-rstudio-prefs.sh
+RUN chmod +x /usr/local/bin/copy-rstudio-prefs.sh
+
 

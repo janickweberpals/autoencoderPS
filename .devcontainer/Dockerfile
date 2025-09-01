@@ -3,17 +3,6 @@
 ARG BASE=rocker/ml
 FROM $BASE 
 
-# Install system dependencies for common R packages
-RUN apt-get update -qq && \
-    apt-get install -y --no-install-recommends \
-    git \
-    libcurl4-openssl-dev \
-    libssl-dev \
-    libxml2-dev \
-    libnode-dev \
-    build-essential \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
-
 # Copy RStudio preferences and helper script
 COPY rstudio-prefs.json /rstudio-prefs.json
 COPY copy-rstudio-prefs.sh /copy-rstudio-prefs.sh

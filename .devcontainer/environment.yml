@@ -1,9 +1,0 @@
-name: base 
-channels:
-  - conda-forge
-dependencies:
-  - tensorflow
-  - keras
-  - numpy
-  - pandas
-  - scikit-learn

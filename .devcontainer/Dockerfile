@@ -1,5 +1,5 @@
 # Pre-built Dev Container Image for R. More info: https://github.com/rocker-org/devcontainer-images/pkgs/container/devcontainer%2Ftidyverse
-FROM ghcr.io/rocker-org/devcontainer/rocker/ml:latest
+FROM ghcr.io/rocker-org/devcontainer/ml:latest
 
 # Install system dependencies for common R packages
 RUN apt-get update -qq && \

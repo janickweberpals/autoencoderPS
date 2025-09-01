@@ -28,7 +28,6 @@ keras3::install_keras(
   envname = "r-tabpfn"
   )
 
-
 reticulate::use_virtualenv("r-tabpfn")
 py_config()
 mnist <- dataset_mnist()

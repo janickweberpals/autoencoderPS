@@ -1,5 +1,7 @@
 # Pre-built Dev Container Image for R. More info: https://github.com/rocker-org/devcontainer-images/pkgs/container/devcontainer%2Ftidyverse
-FROM ghcr.io/rocker-org/devcontainer/tidyverse:4.4
+# use rocker/cuda if NVIDIA drivers are needed, otherwise rocker/ml is a good choice
+ARG BASE=rocker/ml
+FROM $BASE 
 
 # Install system dependencies for common R packages
 RUN apt-get update -qq && \

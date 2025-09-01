@@ -20,4 +20,4 @@ virtualenv_install(
 py_config()
 py_list_packages(envname = "r-tabpfn", type = "virtualenv")
 pak::pak('keras3')
-keras3::install_keras(backend = "tensorflow")
+keras3::install_keras(backend = "tensorflow", envname = "r-tabpfn")
